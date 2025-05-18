@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vonjy Ralijaona - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .profile-pic {
+            border: 5px solid white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">Vonjy Ralijaona</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="menu-link py-4 px-2 text-purple-500 border-b-4 border-purple-500 font-medium">Accueil</a>
+                    <a href="#projects" class="menu-link py-4 px-2 text-gray-500 font-medium hover:text-purple-500 transition duration-300">Mes projets</a>
+                    <a href="#about" class="menu-link py-4 px-2 text-gray-500 font-medium hover:text-purple-500 transition duration-300">À propos</a>
+                    <a href="#contact" class="menu-link py-4 px-2 text-gray-500 font-medium hover:text-purple-500 transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden mobile-menu">
+            <ul>
+                <li><a href="#home" class="block text-sm px-2 py-4 hover:bg-purple-500 hover:text-white transition duration-300">Home</a></li>
+                <li><a href="#projects" class="block text-sm px-2 py-4 hover:bg-purple-500 hover:text-white transition duration-300">Projects</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-purple-500 hover:text-white transition duration-300">About</a></li>
+                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-purple-500 hover:text-white transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">RALIJAONA Vonjy</h1>
+                <p class="text-xl mb-8">Flutter & Angular Developer</p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Mes Projets</a>
+                    <a href="#contact" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition duration-300">Contactez-moi</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="assets/me.jpg" 
+                     alt="Vonjy Ralijaona" 
+                     class="w-64 h-64 rounded-full profile-pic object-cover floating">
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Mes projets</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project HITAKO -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="assets/hitako_app.png" alt="Hitako App" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-bl-lg">Play Store</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hitako</h3>
+                        <p class="text-gray-600 mb-4">Hitako est une application pour les transports en commun dans la ville d'Antananarivo. Elle permet de trouver facilement les trajets le plus pertinant entre deux endroits choisit.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Flutter</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">API&REST</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">PHP & MySql</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hitakov1.app" class="text-purple-600 hover:text-purple-800 font-medium">Voir sur le Play Store <i class="fas fa-external-link-alt ml-1"></i></a>
+                            <a href="#" class="text-green-600 hover:text-gray-800"><i class="fas fa-star"></i> 4.7</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project POSTE APP -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="assets/post_app.png" alt="Open Source Project" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-green-500 text-xs font-bold px-2 py-1 rounded-bl-lg">Open Source</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Post-App</h3>
+                        <p class="text-gray-600 mb-4">Post-App est une petite application Flutter qui permet aux utilisateurs de publier, récupérer et commenter des publications à partir de l'API gratuite JSONPlaceholder.
+                            Le projet suit l’architecture MVVM pour une organisation claire du code, utilise Riverpod pour la gestion d’état, Dio pour les requêtes réseau, et prend en charge les thèmes clair et sombre.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Flutter</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">API</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a target="_blank" href="https://github.com/vonjy-2101/mvvm-flutter-project" class="text-purple-600 hover:text-purple-800 font-medium">Voir sur GitHub <i class="fab fa-github ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project PAOSITRA MONEY MOBILE -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="assets/paositra_money_mobile.png" alt="Open Source Project" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-bl-lg">Play Store</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Paositra Money</h3>
+                        <p class="text-gray-600 mb-4">Paositra Money est une plateforme de services financier en ligne. Elle permet de faire du paiement sur les services comme la facture JIRAMA. Disponible sur le Play Store.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Ionic</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">API&REST</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a target="_blank" href="https://play.google.com/store/search?q=paositra+money&c=apps" class="text-purple-600 hover:text-purple-800 font-medium">Voir sur le Play Store <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project PAOSITRA MONEY ESPACE CLIENT -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="assets/paositra_money.png" alt="Open Source Project" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-bl-lg">En ligne</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Paositra Money - Espace client</h3>
+                        <p class="text-gray-600 mb-4">Paositra Money est une plateforme de services financier en ligne. Elle permet de faire du paiement sur les services comme la facture JIRAMA. Disponible en ligne.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Angular 18</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">API&REST</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a target="_blank" href="https://espaceclient.paositramoney.mg/" class="text-purple-600 hover:text-purple-800 font-medium">Aller sur le site <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project JIRAMA MONEY ESPACE CLIENT -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="assets/jirama_espace_client.png" alt="Open Source Project" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-bl-lg">En ligne</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">JIRAMA - Espace client</h3>
+                        <p class="text-gray-600 mb-4">JIRAMA Espace client est une plateforme en ligne qui permet de consulter les informations de votre factures, faire de l'auto-relevé, payer vos factures et faire des demandes liés sur les services de la JIRAMA comme demande de branchement,etc...Disponible en ligne.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Angular 18</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">API&REST</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a target="_blank" href="https://espaceclient.jirama.mg/" class="text-purple-600 hover:text-purple-800 font-medium">Aller sur le site <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ISA MALAGASY -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="assets/isa_app.png" alt="Open Source Project" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-bl-lg">Play Store</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">ISA</h3>
+                        <p class="text-gray-600 mb-4">ISA est une application qui permet de traduire les chiffres en lettre malgache. Elle est open source et disponible sur GitHub. Disponible sur Play Store.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Flutter</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.orgapp.isa&hl=fr" class="text-purple-600 hover:text-purple-800 font-medium">Voir sur le Play Store <i class="fas fa-external-link-alt ml-1"></i></a>
+                            <a target="_blank" href="https://github.com/vonjy-2101/isa" class="text-purple-600 hover:text-purple-800 font-medium">Voir sur GitHub <i class="fab fa-github ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAOMA DISTRIBUTEUR -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="assets/distributeur_paoma.png" alt="Open Source Project" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-bl-lg">Play Store</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Paoma Distributeur</h3>
+                        <p class="text-gray-600 mb-4">Paoma Distributeur est une plateforme de service financier malgache(Paositra Malagasy), réservé pour les commerçants. Elle permet aux distributeurs de se connecter via l’application mobile Paoma Distributeur et de proposer l’ensemble des services de transferts d’argent, de rechargement, de paiement de facture JIRAMA et de retrait aux clients de Paositra money. Disponible sur Play Store.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Flutter</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">API&REST</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.numherit.paoma_distributeur&hl=fr" class="text-purple-600 hover:text-purple-800 font-medium">Voir sur le Play Store <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NY VOLAKO DISTRIBUTEUR -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="assets/ny_volako.png" alt="Open Source Project" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-bl-lg">Play Store</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Ny Volako Distributeur</h3>
+                        <p class="text-gray-600 mb-4">Ny Volako Distributeur est une plateforme de service financier malgache proposé par la Caisse d'Épargne de Madagascar, réservé pour les commerçants. Elle permet aux distributeurs et partenaires de se connecter via l’application mobile Ny Volako et de proposer l’ensemble des services de transferts d’argent, de rechargement et de retrait aux clients de la CEM. Disponible sur Play Store.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Flutter</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">API&REST</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=org.app.cem.cem_distributeur&hl=fr" class="text-purple-600 hover:text-purple-800 font-medium">Voir sur le Play Store <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JIRAMA APP -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <div class="relative">
+                        <img src="assets/jirama_app.png" alt="Open Source Project" class="w-full h-48 object-cover">
+                        <div class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-2 py-1 rounded-bl-lg">Play Store</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">JIRAMA Mobile</h3>
+                        <p class="text-gray-600 mb-4">L’application Jirama met à disposition des clients tous les services Jirama en ligne et permet le suivi et envoi des index de consommation, la consultation et paiement des factures d’électricité et eau par les clients ainsi que la déclaration des incidents et réclamations commerciales.
+                            L’application Jirama va permettre aux clients de régler une facture, suivre la consommation d’électricité au jour le jour… quel que soit l’endroit, peu importe le moment, les clients peuvent se connecter à l’application Jirama accédez à l’essentiel des infos client..</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Flutter</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">API&REST</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.numherit.jirama&hl=fr" class="text-purple-600 hover:text-purple-800 font-medium">Voir sur le Play Store <i class="fas fa-external-link-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+                         class="rounded-lg shadow-xl w-full max-w-md mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">À propos de moi</h2>
+                    <p class="text-gray-600 mb-4">Développeur mobile multiplateforme avec Flutter et front-end avec Angular avec plus de 4 ans d’expérience, je suis passionné par la création d'applications mobiles performantes, intuitives et utiles.</p>
+                    <p class="text-gray-600 mb-6">Chez <b><i>Numherit Madagascar</i></b>, j’ai contribué au développement d’applications à fort impact comme <b><i>Paositra Money et JIRAMA (Mobile et Espace client)</i></b>, ou encore des solutions dédiées aux distributeurs. Ces projets m'ont permis de collaborer étroitement avec des équipes backend, chefs de projet et clients, tout en m’impliquant dans la conception, le développement, l'intégration d'API REST, et parfois le déploiement sur les stores.</p>
+                    <p class="text-gray-600 mb-6">En parallèle, j’ai mené des projets personnels comme <b><i>HITAKO</i></b>, une application d’itinéraire pour les transports en commun, disponible sur le Play Store, et <b><i>ISA-MALAGASY</i></b>, une app utile pour la conversion des chiffres en lettres en malgache. Ces initiatives illustrent mon autonomie, ma curiosité et mon envie constante d’apprendre.</p>
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Mes compétences</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-gray-700 flex items-center">
+                            <img src="assets/flutter.png" width="20px"> Flutter
+                        </span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-gray-700 flex items-center">
+                            <i class="fab fa-angular text-red-500 mr-2"></i> Angular
+                        </span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-gray-700 flex items-center">
+                            <i class="fab fa-js text-yellow-500 mr-2"></i> JavaScript
+                        </span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-gray-700 flex items-center">
+                            <img src="assets/html.png" width="20px"> HTML&CSS
+                        </span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-gray-700 flex items-center">
+                            <img src="assets/bootstrap.png" width="20px"> Bootsrap
+                        </span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-gray-700 flex items-center">
+                            <i class="fas fa-fire text-orange-500 mr-2"></i> Firebase
+                        </span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-gray-700 flex items-center">
+                            <i class="fas fa-code-branch text-green-500 mr-2"></i> Git
+                        </span>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Restons en contact</h2>
+              
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                <div class="bg-gray-100 p-4 rounded-xl text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
+                    <p class="text-gray-600">ralvonjy@gmail.com</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-xl text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Contact</h3>
+                    <p class="text-gray-600">+261 34 16 851 01</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-xl text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-github text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">GitHub</h3>
+                    <p class="text-gray-600">github.com/vonjy-2101</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Vonjy Ralijaon. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.querySelector(".mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+
+        document.querySelector
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll(".menu-link");
+
+            links.forEach(link => {
+            link.addEventListener("click", function () {
+                // Réinitialise tous les liens
+                links.forEach(l => {
+                l.classList.remove("text-purple-500", "border-b-4", "border-purple-500");
+                l.classList.add("text-gray-500");
+                });
+
+                // Active le lien cliqué
+                this.classList.remove("text-gray-500");
+                this.classList.add("text-purple-500", "border-b-4", "border-purple-500");
+            });
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Animation for project cards on scroll
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        projectCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
